@@ -52,7 +52,7 @@ if response.status_code == 200:
     csv_file = 'fortune500_data.csv'
     with open(csv_file, mode='w', newline='', encoding='utf-8') as file:
         writer = csv.writer(file)
-        writer.writerow(['Rank', 'Company', 'Revenue', 'Profit', 'Employees'])
+        writer.writerow(['Rank', 'Company','Industry','City','State','Employees', 'Revenue (in millions)','Valuation(in millions)', Profit (in millions)])
         writer.writerows(data)
 
     print(f"Data successfully scraped and saved to {csv_file}")
